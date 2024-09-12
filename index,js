@@ -1,0 +1,6 @@
+function calcularNivel(vitorias, derrotas) {
+    let saldoVitoria = vitoria - derrotas;
+    let nivel = "";
+
+    
+}
