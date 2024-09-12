@@ -3,22 +3,22 @@ function calcularNivel(vitorias, derrotas) {
     let nivel = "";
 
     switch (true) {
-        case (vitorias < 10):
+        case (saldoVitorias < 10):
             nivel = "Ferro";
             break;
-        case (vitorias <= 20):
+        case (saldoVitorias <= 20):
             nivel = "Bronze";
             break;
-        case (vitorias <= 50):
+        case (saldoVitorias <= 50):
             nivel = "Prata";
             break;
-        case (vitorias <= 80):
+        case (saldoVitorias <= 80):
             nivel = "Ouro";
             break;
-        case (vitorias <=90):
+        case (saldoVitorias <= 90):
             nivel = "Diamante";
             break;
-        case (vitorias <= 100):
+        case (saldoVitorias <= 100):
             nivel = "Lendário";
             break;
         default:
@@ -28,9 +28,10 @@ function calcularNivel(vitorias, derrotas) {
 
     return { saldoVitorias, nivel };
 }
+
 function exibirResultado(vitorias, derrotas) {
     const resultado = calcularNivel(vitorias, derrotas);
-    console.log("O Herói tem de saldo de " + resultado.saldoVitorias + " está no nível de " + resultado.nivel);
+    console.log("O Herói tem um saldo de " + resultado.saldoVitorias + " vitórias e está no nível " + resultado.nivel);
 }
 
 const vitorias = 45;
